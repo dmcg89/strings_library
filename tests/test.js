@@ -27,7 +27,9 @@ test('Test allCaps', () => {
 })
 
 test('Test capitalizeWords', () => {
-  expect(tests.capitalizeWords('caps')).toBe('CAPS')
-  expect(tests.capitalizeWords('CaPs')).toBe('CAPS')
+  expect(tests.capitalizeWords('caps')).toBe('Caps')
+  expect(tests.capitalizeWords('CaPs')).toBe('CaPs')
   expect(tests.capitalizeWords('CAPS')).toBe('CAPS')
+  expect(tests.capitalizeWords('cAPS')).toBe('CAPS')
+  expect(tests.capitalizeWords('caPS')).toBe('CaPS')
 })
