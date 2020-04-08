@@ -1,3 +1,4 @@
+// eslint-disable-next-line max-len
 // TODO:    - Help function that strips punctuation, include options to include numeric, standard punctuation
 //          - Combine kabob and snake
 // Challenge #1
