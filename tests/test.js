@@ -5,19 +5,9 @@ const tests = require('../index')
 test('canary test', () => {
 })
 
-// Methods to test
-//     - capitalize √
-//     - allCaps √
-//     - capitalizeWords
-//     - removeExtraSpaces
-//     - kabobCase
-//     - snakeCase
-//     - camelCase
 
 test('Test capitalize', () => {
   expect(tests.capitalize('capitalize')).toBe('Capitalize')
-  // expect(tests.capitalize(3)).toBe(3)
-  // better practice to raiseType error or sanitize input?
 })
 
 test('Test allCaps', () => {
@@ -32,4 +22,10 @@ test('Test capitalizeWords', () => {
   expect(tests.capitalizeWords('CAPS')).toBe('CAPS')
   expect(tests.capitalizeWords('cAPS')).toBe('CAPS')
   expect(tests.capitalizeWords('caPS')).toBe('CaPS')
+})
+
+test('Test removeExtraSpace', () => {
+  expect(tests.removeExtraSpaces('   Test   test   test')).toBe('Test test test')
+  expect(tests.removeExtraSpaces('C  a  P  s')).toBe('C a P s')
+  expect(tests.removeExtraSpaces('   l  l  l   l   ll')).toBe('l l l l ll')
 })
